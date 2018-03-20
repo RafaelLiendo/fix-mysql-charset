@@ -6,7 +6,7 @@ SET FOREIGN_KEY_CHECKS=0;
 
 SELECT CONCAT('ALTER TABLE `', table_name, '` MODIFY `', column_name, '` ', DATA_TYPE, '(', CHARACTER_MAXIMUM_LENGTH, ') CHARACTER SET latin1 COLLATE latin1_swedish_ci', (CASE WHEN IS_NULLABLE = 'NO' THEN ' NOT NULL' ELSE '' END), ';')
 FROM information_schema.COLUMNS 
-WHERE TABLE_SCHEMA = 'yourDB'
+WHERE TABLE_SCHEMA = 'masteron_mastersite'
 AND DATA_TYPE = 'varchar'
 AND
 (
@@ -17,7 +17,7 @@ AND
 
 SELECT CONCAT('ALTER TABLE `', table_name, '` MODIFY `', column_name, '` ', DATA_TYPE, ' CHARACTER SET latin1 COLLATE latin1_swedish_ci', (CASE WHEN IS_NULLABLE = 'NO' THEN ' NOT NULL' ELSE '' END), ';')
 FROM information_schema.COLUMNS 
-WHERE TABLE_SCHEMA = 'yourDB'
+WHERE TABLE_SCHEMA = 'masteron_mastersite'
 AND DATA_TYPE != 'varchar'
 AND
 (
