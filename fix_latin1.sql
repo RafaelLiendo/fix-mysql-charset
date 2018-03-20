@@ -1,6 +1,6 @@
 --fix character set to latin1
 
-ALTER DATABASE masteron_mastersite CHARACTER SET latin1 COLLATE latin1_swedish_ci
+ALTER DATABASE masteron_mastersite CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 
 SET FOREIGN_KEY_CHECKS=0;
 
